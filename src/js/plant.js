@@ -9,7 +9,7 @@ export const changeState = (prop) => {
 
 export const storeState = () => {
   let currentState = { soil: 0, light: 0, water: 0 };
-  return (stateChangeFunction) => {
+  return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
     currentState = { ...newState };
     return newState;
