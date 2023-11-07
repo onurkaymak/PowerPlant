@@ -1,4 +1,4 @@
-import { changeState } from './../src/js/plant.js';
+import { changeState, storeState } from './../src/js/plant.js';
 
 describe(changeState, () => {
 
@@ -11,5 +11,17 @@ describe(changeState, () => {
 
 
     expect(result).toEqual(compareTo);
+  });
+});
+
+
+describe(storeState, () => {
+
+  test('Test #1 - It should increment the state value(s) depends on given state information.', () => {
+    const blueFood = changeState("soil")(5)
+    const stateControl = storeState();
+    const fedPlant = stateControl(blueFood);
+
+    expect(fedPlant).toEqual({ soil: 5, light: 0, water: 0 });
   });
 });
