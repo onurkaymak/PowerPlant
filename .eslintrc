@@ -11,8 +11,8 @@
   },
   "rules": {
     "semi": 1,
-    "indent": ["warn", 4],
-    "no-console": "warn",
+    "indent": ["warn", 2],
+    "no-console": "off",
     "no-debugger": "off",
     "no-undef": "off"
   }
