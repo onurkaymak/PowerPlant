@@ -18,7 +18,7 @@ describe(changeState, () => {
 describe(storeState, () => {
 
   test('Test #1 - It should increment the state value(s) depends on given state information.', () => {
-    const blueFood = changeState("soil")(5)
+    const blueFood = changeState("soil")(5);
     const stateControl = storeState();
     const fedPlant = stateControl(blueFood);
 
